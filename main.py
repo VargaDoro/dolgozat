@@ -10,3 +10,5 @@ feladatok.masodik_harommal(lista)
 
 print("Harmadik feladat:")
 feladatok.harom("valami", 2)
+
+feladatok.negy()

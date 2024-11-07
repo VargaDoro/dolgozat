@@ -18,13 +18,13 @@ def masodik():
     return lista
 
 def masodik_harommal(lista):
-    osszeg:int=0
+    i:int=0
     db:int=0
-    for i in range(len(lista)):
-        if(osszeg%3==0):
-            osszeg+=lista[i]
+    while(i<len(lista)):
+        if(lista[i]%3==0):
             db+=1
-            print(f"A számok között {db} db 3-mal osztható van!")
+        i+=1
+    print(f"A számok között {db} db 3-mal osztható van!")
 
 
 '''Írj eljárást, mely paraméterként kap egy text szöveget, és egy N számot. 
@@ -40,5 +40,24 @@ def harom(text:str, N:int):
 Hány nevet adott meg a felhasználó? 
 A kiírás formája: „A felhasználó 12 nevet adott meg.'''
 def negy():
-    
+    nev:str=str(input("Adj meg egy nevet: (@-t a kilpéshez)"))
+    tarolas=[]
+    db:int=0
+    while(nev!="@"):
+        tarolas.append(nev)
+        nev:str=str(input("Adj meg egy nevet: (@-t a kilpéshez)"))
+        db+=1
+    print("A megadott nevek száma: ",db)
 
+
+'''Szimuláljuk a kő-papír-olló játékot. 
+Írj eljárást, amiben: 
+A felhasználótól bekérjük a tippjét, ami kő/papír/olló lehet. Alakítsd át csupa kisbetűssé a szöveget, majd tárold
+el a felhasznalo_tippje változóban. 
+Ezután a gép generál egy egész számot [1,3] között.  1- kő, 2- papír – 3 olló. Tárold el a gep_tippje változóban
+Ezután írd ki, hogy ki nyert!
+	Ha a két szó ugyanaz, írja ki, hogy Döntetlen. 
+	Egyéb esetben azt írja ki, aki győzött!
+++ Ha valami más szót ad meg a felhasznló  a kő, papír, ollón kívül, akkor kérje be újra!'''
+def ot():
+    
