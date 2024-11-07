@@ -34,7 +34,7 @@ def harom(text:str, N:int):
     if(len(text)<N):
         print("Nincs N. karakter!")
     else:
-        print(f"A szöveg {N} karaktere: ",text[N].upper()*3)
+        print(f"A szöveg {N} karaktere: ",text[N-1].upper()*3)
 
 '''Írj metódust, mely neveket kér a felhasználótól, amíg a @ jelet nem kapja.
 Hány nevet adott meg a felhasználó? 
@@ -60,4 +60,30 @@ Ezután írd ki, hogy ki nyert!
 	Egyéb esetben azt írja ki, aki győzött!
 ++ Ha valami más szót ad meg a felhasznló  a kő, papír, ollón kívül, akkor kérje be újra!'''
 def ot():
-    
+    tipp:str=str(input("Adj egy tippet(kő/papír/olló): ")).lower()
+    felhasznalo_tippjei=[]
+    felhasznalo_tippjei.append(tipp)
+    szam:int=int(random.random()*3+1)
+    if szam==1:
+        szam_str:str="kő"
+    elif szam==2:
+        szam_str:str="papír"
+    elif szam==3:
+        szam_str:str="olló"
+    gep_tippje=[]
+    gep_tippje.append(szam)
+    print(f"A robot tippje: {szam_str}")
+    if tipp=="kő" and szam==1 or tipp=="papír" and szam==2 or tipp=="olló" and szam==3:
+        print("Döntetlen")
+    elif tipp=="kő" and szam==2:
+        print("A robot győzött")
+    elif tipp=="kő" and szam==3:
+        print("A felhasználó győzött")
+    elif tipp=="papír" and szam==1:
+        print("A felhasználó győzött")
+    elif tipp=="papír" and szam==3:
+        print("A robot győzött")
+    elif tipp=="olló" and szam==1:
+        print("A robot győzött")
+    elif tipp=="olló" and szam==2:
+        print("A felhasználó győzött")
