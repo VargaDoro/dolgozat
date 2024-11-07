@@ -35,4 +35,4 @@ Ezután írd ki, hogy ki nyert!
 	Egyéb esetben azt írja ki, aki győzött!
 ++ Ha valami más szót ad meg a felhasznló  a kő, papír, ollón kívül, akkor kérje be újra!
 
-![eredmény](/assets/dolgozat/eredmeny.PNG)
+![eredmény](eredmeny.PNG)
